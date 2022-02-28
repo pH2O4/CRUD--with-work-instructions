@@ -1,0 +1,14 @@
+.login{
+display: flex;
+justify-content:center;
+background-color: rgb(92, 160, 172);
+margin-top: 150px;
+margin: 150px 450px;
+border-radius: 10px;
+padding: 15px;
+padding-bottom: 25px;
+ }
+
+.form{
+
+}
