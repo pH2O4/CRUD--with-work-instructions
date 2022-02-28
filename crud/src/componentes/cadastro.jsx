@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import "./login.css"
+import "./cadastro.css"
 import {Form, Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () =>{
 
 return(
-<div className="login">
+<div className="cadastro">
   <Form className="form">
   <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>Nome Completo</Form.Label>
+    <Form.Control  type="name" placeholder="Ensira seu nome"/>
     <Form.Label>Email address</Form.Label>
     <Form.Control type="email" placeholder="Enter email" />
     <Form.Text className="text-muted">
@@ -19,10 +21,11 @@ return(
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" placeholder="Password" />
+    <Form.Label>Ensira a senha novamente</Form.Label>
+    <Form.Control type="passwordRepeat" placeholder="Password" />
   </Form.Group>
-  <Button variant="primary" href="/Cadastro">Cadastro-se </Button><br /> <br />
   <Button variant="primary" type="submit">
-   Login
+    Submit
   </Button>
 </Form>
 </div>
