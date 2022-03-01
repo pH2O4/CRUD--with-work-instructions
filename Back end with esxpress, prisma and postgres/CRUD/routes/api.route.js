@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {PrismaClient} = require('@prisma/client')
+const { PrismaClient } = require('@prisma/client')
 const cors = require("cors");
 const express = require('express');
 
@@ -10,11 +10,27 @@ router.use(cors());
 
 router.use(express.json());
 
-router.post('/usuarios', async (req, res, next) => {
-  const {email} = req.body
-  const {senha} = req.body
+router.get('/usuarios', async (req, res, next) => {
 
-  console.log(email)
+  try {
+    const usuarios = await prisma.Usuarios.findMany({})
+    const { Email } = req.body
+    const { Senha } = req.body
+    if (usuarios == 0) {
+      res.send()
+    } else if( Email == true & Senha == false) {
+      console.log("Verifique sua senha")
+    } else {
+      console.log(usuarios)
+    }
+  } catch (error) {
+    next(error)
+  }
+
+  /* const {email} = req.body
+   const {senha} = req.body
+ 
+   console.log(email)3*/
 });
 
 

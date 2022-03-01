@@ -14,9 +14,9 @@ const Login = () =>{
   };
   
   const ClickButtonS = () =>{
-  Axios.post("http://localhost:8000/api/usuarios",{
-    email: values.email,
-    senha: values.senha,
+  Axios.get("http://localhost:8000/api/usuarios",{
+    email: values.Email,
+    senha: values.Senha,
 
   }).then((response)=> {
     console.log(response)
@@ -27,7 +27,7 @@ return(
   <Form className="form">
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
-    <Form.Control onChange={ChangingValue} name="email" type="email" placeholder="Enter email" />
+    <Form.Control onChange={ChangingValue} name="Email" type="email" placeholder="Enter email" />
     <Form.Text className="text-muted">
      lembre-se de nao compartilhar suas informações de login
     </Form.Text>
@@ -35,7 +35,7 @@ return(
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
-    <Form.Control  onChange={ChangingValue} name="senha" type="password" placeholder="Password" />
+    <Form.Control  onChange={ChangingValue} name="Senha" type="password" placeholder="Password" />
   </Form.Group>
   <Button variant="primary" href="/Cadastro">Cadastro-se </Button><br /> <br />
   <Button variant="primary"  onClick={() => ClickButtonS()} type="submit">
