@@ -13,16 +13,17 @@ router.use(express.json());
 router.get('/usuarios', async (req, res, next) => {
 
   try {
-    const usuarios = await prisma.Usuarios.findMany({})
     const { Email } = req.body
     const { Senha } = req.body
-    if (usuarios == 0) {
-      res.send()
-    } else if( Email == true & Senha == false) {
-      console.log("Verifique sua senha")
-    } else {
-      console.log(usuarios)
-    }
+    const usuarios = await prisma.Usuarios.findMany({
+      Email,
+      Senha
+    })
+    if(usuarios == 0)
+      res.json("Você está sem cadastro, por favor vá na opção Cadastre-se")
+
+
+
   } catch (error) {
     next(error)
   }

@@ -1,8 +1,9 @@
-import React, { useState, Component } from "react";
+import React, { useState} from "react";
 import "./login.css"
 import {Form, Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios"
+import $ from "jquery";
 
 const Login = () =>{
   const [values, setValues] = useState();
@@ -14,13 +15,18 @@ const Login = () =>{
   };
   
   const ClickButtonS = () =>{
+       
+
   Axios.get("http://localhost:8000/api/usuarios",{
     email: values.Email,
     senha: values.Senha,
-
   }).then((response)=> {
+    const itens = response.data
+//document.body..insertAdjacentHTML('beforeend', `<h1>${itens}</h1>`)    
+window.alert(`${itens}`);
     console.log(response)
   })
+
   }
 return(
 <div className="login">
@@ -37,7 +43,7 @@ return(
     <Form.Label>Password</Form.Label>
     <Form.Control  onChange={ChangingValue} name="Senha" type="password" placeholder="Password" />
   </Form.Group>
-  <Button variant="primary" href="/Cadastro">Cadastro-se </Button><br /> <br />
+  <Button variant="primary" href="/Cadastro">Cadastre-se </Button><br /> <br />
   <Button variant="primary"  onClick={() => ClickButtonS()} type="submit">
    Login
   </Button>

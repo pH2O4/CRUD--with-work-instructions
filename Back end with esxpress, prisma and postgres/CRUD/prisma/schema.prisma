@@ -11,7 +11,8 @@ datasource db {
 }
 
 model Usuarios{
-  Id Int @default(autoincrement())
+  id Int @default(autoincrement())
   Email String @unique
   Senha String 
+  NomeC String
 }
