@@ -9,7 +9,7 @@ const [values, setValues] = useState();
 const ChangingValue = (value) => {
 let senha = $("[name=Senha]").val()
 let senhaV = $("[name=SenhaV]").val()
-if9
+
 
   setValues((prevValue) => ({
     ...prevValue,
