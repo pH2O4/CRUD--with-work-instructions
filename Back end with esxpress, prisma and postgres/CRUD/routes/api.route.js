@@ -40,15 +40,13 @@ router.post('/usuarios', async (req, res, next) => {
     const { SenhaV} = req.body
     if(Senha != SenhaV) {
       res.json("Senhas não conferem");
-    } else{
-          const usuarios = await prisma.Usuarios.create({
-     Email: Email,
-     Senha: Senha,
-     NomeC: NomeC
-    })
-   res.sendStatus("Parabéns sua conta doi criada! estamos te encaminhando para area de login")
-
     }
+     const usuarios = await prisma.Usuarios.create({
+ data: req.body
+    })
+   res.send("Parabéns sua conta foi criada! estamos te encaminhando para area de login")
+
+    
 
 
 

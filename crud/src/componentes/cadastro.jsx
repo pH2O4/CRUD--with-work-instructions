@@ -22,12 +22,8 @@ const ClickButtonS = () =>{
     NomeC: values.NomeC,
   }).then((response)=> {
     const resposta = response.data
-    let contador = ""
-    if(contador = 1){
-    return
-    }else{
-        $(".senhacorretaounao").append(`${resposta}`);
-    }   
+window.alert(`${resposta}`)
+    
 
 
     console.log(response)
