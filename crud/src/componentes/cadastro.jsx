@@ -1,16 +1,13 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import "./cadastro.css"
 import {Form, Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery'
+import Axios from 'axios'
 
 const Login = () =>{
 const [values, setValues] = useState();
 const ChangingValue = (value) => {
-let senha = $("[name=Senha]").val()
-let senhaV = $("[name=SenhaV]").val()
-
-
   setValues((prevValue) => ({
     ...prevValue,
     [value.target.name]: value.target.value,
@@ -18,6 +15,23 @@ let senhaV = $("[name=SenhaV]").val()
 };
 
 const ClickButtonS = () =>{
+  Axios.post("http://localhost:8000/api/usuarios",{
+    Email: values.Email,
+    Senha: values.Senha,
+    SenhaV: values.SenhaV,
+    NomeC: values.NomeC,
+  }).then((response)=> {
+    const resposta = response.data
+    let contador = ""
+    if(contador = 1){
+    return
+    }else{
+        $(".senhacorretaounao").append(`${resposta}`);
+    }   
+
+
+    console.log(response)
+  })
 }
 return(
 <div className="cadastro">
@@ -41,9 +55,11 @@ return(
     
     </Form.Text>
   </Form.Group>
+    <div className="senhacorretaounao"></div>
   <Button variant="primary" onClick={() => ClickButtonS()} type="submit">
     Submit
   </Button>
+
 </Form>
 </div>
 

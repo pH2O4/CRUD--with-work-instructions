@@ -28,12 +28,34 @@ router.get('/usuarios', async (req, res, next) => {
     next(error)
   }
 
-  /* const {email} = req.body
-   const {senha} = req.body
- 
-   console.log(email)3*/
 });
 
 
+router.post('/usuarios', async (req, res, next) => {
 
+  try {
+    const { Email } = req.body
+    const { Senha } = req.body
+    const { NomeC } = req.body
+    const { SenhaV} = req.body
+    if(Senha != SenhaV) {
+      res.json("Senhas não conferem");
+    } else{
+          const usuarios = await prisma.Usuarios.create({
+     Email: Email,
+     Senha: Senha,
+     NomeC: NomeC
+    })
+   res.sendStatus("Parabéns sua conta doi criada! estamos te encaminhando para area de login")
+
+    }
+
+
+
+
+  } catch (error) {
+    next(error)
+  }
+
+});
 module.exports = router;
