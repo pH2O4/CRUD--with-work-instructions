@@ -18,11 +18,10 @@ const Login = () =>{
        
 
   Axios.get("http://localhost:8000/api/usuarios",{
-    email: values.Email,
-    senha: values.Senha,
+    Email: values.Email,
+    Senha: values.Senha,
   }).then((response)=> {
-    const itens = response.data
-//document.body..insertAdjacentHTML('beforeend', `<h1>${itens}</h1>`)    
+    const itens = response.data   
 window.alert(`${itens}`);
     console.log(response)
   })

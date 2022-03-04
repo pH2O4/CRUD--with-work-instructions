@@ -22,6 +22,7 @@ const ClickButtonS = () =>{
     NomeC: values.NomeC,
   }).then((response)=> {
     const resposta = response.data
+    console.log(response)
 window.alert(`${resposta}`)
     
 
