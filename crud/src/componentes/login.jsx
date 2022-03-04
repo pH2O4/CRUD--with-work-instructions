@@ -17,7 +17,7 @@ const Login = () =>{
   const ClickButtonS = () =>{
        
 
-  Axios.get("http://localhost:8000/api/usuarios",{
+  Axios.post("http://localhost:8000/api/login",{
     Email: values.Email,
     Senha: values.Senha,
   }).then((response)=> {

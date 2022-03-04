@@ -10,15 +10,28 @@ router.use(cors());
 
 router.use(express.json());
 
-router.get('/usuarios', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
 
   try {
     const  email  = req.body.Email
     const  senha  = req.body.Senha
-    const usuarios = await prisma.Usuarios.findMany()
-    console.log(usuarios)
-   
+    const EMAILPRO = await prisma.Usuarios.findMany({
+ where:{
+   Email: email,
+ },
+    })
+    const SENHAPRO = await prisma.Usuarios.findMany({
+      where:{
+        Senha: senha,
+      },
+         })
 
+    if(EMAILPRO == 0){
+      res.send("Você não tem cadastro")
+    }else if(SENHAPRO == 0){
+      res.send("senha errada verifique novamente")
+    }
+   
   
 
 
