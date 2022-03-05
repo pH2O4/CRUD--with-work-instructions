@@ -1,0 +1,27 @@
+.Work{
+  background-color: beige;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Work{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:1fr;
+  grid-template-areas:
+      "header"
+      "contentx";
+  height: 100vh;
+  background-color: #F5F5F5;
+}
+
+
+
+.Contentx{
+  grid-area: contentx;
+}

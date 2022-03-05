@@ -21,9 +21,14 @@ const Login = () =>{
     Email: values.Email,
     Senha: values.Senha,
   }).then((response)=> {
-    const itens = response.data   
-window.alert(`${itens}`);
-    console.log(response)
+    const itens = response.data
+   if(response.data === "logando"){
+  window.location.href = 'http://localhost:3000/WorkStation'
+}else{
+  window.alert(`${itens}`);
+}    
+
+
   })
 
   }
@@ -43,7 +48,7 @@ return(
     <Form.Control  onChange={ChangingValue} name="Senha" type="password" placeholder="Password" />
   </Form.Group>
   <Button variant="primary" href="/Cadastro">Cadastre-se </Button><br /> <br />
-  <Button variant="primary"  onClick={() => ClickButtonS()} type="submit">
+  <Button variant="primary"  onClick={() => ClickButtonS()}>
    Login
   </Button>
 </Form>

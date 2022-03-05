@@ -30,6 +30,8 @@ router.post('/login', async (req, res, next) => {
       res.send("Você não tem cadastro")
     }else if(SENHAPRO == 0){
       res.send("senha errada verifique novamente")
+    }else{
+      res.send("logando")
     }
    
   
