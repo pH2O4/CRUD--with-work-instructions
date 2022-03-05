@@ -1,8 +1,10 @@
 .Work{
-  background-color: beige;
+  background-color: rgb(192, 192, 118);
 }
 
-
+:root{
+  --header-heigth: 60px
+}
 
 * {
   box-sizing: border-box;
@@ -12,7 +14,7 @@
 .Work{
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:1fr;
+  grid-template-rows:var(--header-heigth) 1fr;
   grid-template-areas:
       "header"
       "contentx";
@@ -20,8 +22,24 @@
   background-color: #F5F5F5;
 }
 
+#Addline{
+ margin-right: 10px;
+}
 
+.ContainerButtonForm{
+  display: inline-flex;
+  margin: 15px;
+}
 
+.webfunctions{
+  margin: 10px;
+}
+
+.header{
+  grid-area: header;
+  background-color: rgb(85, 196, 196);
+}
 .Contentx{
   grid-area: contentx;
+  background-color: rgb(188, 241, 241);
 }

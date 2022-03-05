@@ -76,4 +76,8 @@ router.post('/usuarios', async (req, res, next) => {
   }
 
 });
+
+router.post('/usuarios', async (req, res, next) =>{
+
+})
 module.exports = router;
