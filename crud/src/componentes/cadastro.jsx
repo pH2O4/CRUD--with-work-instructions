@@ -23,8 +23,9 @@ const ClickButtonS = () =>{
   }).then((response)=> {
     const resposta = response.data
     console.log(response)
-window.alert(`${resposta}`)
-    
+ window.alert(`${resposta}`)
+
+ 
 
 
     console.log(response)
@@ -53,7 +54,7 @@ return(
     </Form.Text>
   </Form.Group>
     <div className="senhacorretaounao"></div>
-  <Button variant="primary" onClick={() => ClickButtonS()} type="submit">
+  <Button variant="primary" onClick={() => ClickButtonS()}>
     Submit
   </Button>
 
