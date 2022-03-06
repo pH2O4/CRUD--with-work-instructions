@@ -34,7 +34,7 @@ router.post('/login', async (req, res, next) => {
       res.send("logando")
     }
    
-  
+
 
 
 
@@ -78,9 +78,18 @@ router.post('/usuarios', async (req, res, next) => {
 });
 
 router.post('/workinstructions', async (req, res, next) =>{
-  const  linhanome  = req.body.LinhaNome
-  console.log(linhanome)
+
+try {
+    const  linhanome  = req.body.LinhaNome
+  const  email  = req.body.Email
+   console.log(email)
+   console.log(linhanome)
+   res.send(linhanome)
+} catch (error) {
+  next(error)
+}
+  
+       })
 
 
-})
 module.exports = router;

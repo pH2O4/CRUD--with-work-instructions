@@ -23,9 +23,8 @@ const WorkS = () =>{
     Axios.post('http://localhost:8000/api/workinstructions',{
        LinhaNome: values.LinhaNome
     } ).then((response)=> {
-
+console.log(response.data)
     })
-    console.log('skkasksak')
   }
  
   $(window).on("load", function(){
