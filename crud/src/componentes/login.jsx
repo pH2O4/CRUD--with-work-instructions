@@ -14,8 +14,24 @@ const Login = () =>{
     }));
   };
   
+  document.addEventListener("keypress", function(e) {
+    if(e.key === 'Enter') {
+    
+        var btn = document.querySelector("#buttonlogin");
+      
+      btn.click();
+    
+    }
+  });
+
   const ClickButtonS = () =>{
-       
+      
+  Axios.post("http://localhost:8000/api/workinstructions",{
+    Email: values.Email,
+    
+  }).then((response)=> {
+  
+  })
 
   Axios.post("http://localhost:8000/api/login",{
     Email: values.Email,
@@ -24,10 +40,10 @@ const Login = () =>{
     const itens = response.data
    if(response.data === "logando"){
   window.location.href = 'http://localhost:3000/WorkStation'
+
 }else{
   window.alert(`${itens}`);
 }    
-
 
   })
 
@@ -48,7 +64,7 @@ return(
     <Form.Control  onChange={ChangingValue} name="Senha" type="password" placeholder="Password" />
   </Form.Group>
   <Button variant="primary" href="/Cadastro">Cadastre-se </Button><br /> <br />
-  <Button variant="primary"  onClick={() => ClickButtonS()}>
+  <Button id="buttonlogin" variant="primary"  onClick={() => ClickButtonS()}>
    Login
   </Button>
 </Form>
