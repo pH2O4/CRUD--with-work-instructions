@@ -17,11 +17,14 @@ const WorkS = () =>{
       [value.target.name]: value.target.value,
     }));
   };
-
+  // $(".ContainerLinhas").append(`${}`)
+  
   const AdicionarLinha = () =>{
-    Axios.post()
-   $(".ContainerLinhas").append(`${}`)
+    Axios.post('http://localhost:8000/api/workinstructions',{
+       LinhaNome: values.LinhaNome
+    } ).then((response)=> {
 
+    })
     console.log('skkasksak')
   }
  

@@ -77,7 +77,10 @@ router.post('/usuarios', async (req, res, next) => {
 
 });
 
-router.post('/usuarios', async (req, res, next) =>{
+router.post('/workinstructions', async (req, res, next) =>{
+  const  linhanome  = req.body.LinhaNome
+  console.log(linhanome)
+
 
 })
 module.exports = router;
