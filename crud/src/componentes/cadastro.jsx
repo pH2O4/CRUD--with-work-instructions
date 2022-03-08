@@ -24,6 +24,7 @@ const ClickButtonS = () =>{
     const resposta = response.data
     console.log(response)
  window.alert(`${resposta}`)
+ window.location.href = 'http://localhost:3000/'
 
  
 

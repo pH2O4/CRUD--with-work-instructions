@@ -2,12 +2,13 @@ const router = require('express').Router();
 const { PrismaClient } = require('@prisma/client')
 const cors = require("cors");
 const express = require('express');
+const bodyParser = require('body-parser')
 
 const prisma = new PrismaClient()
 
-
+router.use(bodyParser.json())
 router.use(cors());
-
+router.use(bodyParser.urlencoded({extended:true}))
 router.use(express.json());
 
 router.post('/login', async (req, res, next) => {
@@ -62,6 +63,7 @@ router.post('/usuarios', async (req, res, next) => {
    NomeC: nomeC,
  }
     })
+
    res.send("Parabéns sua conta foi criada! estamos te encaminhando para area de login")
     }
      
@@ -82,8 +84,10 @@ router.post('/workinstructions', async (req, res, next) =>{
 try {
     const  linhanome  = req.body.LinhaNome
   const  email  = req.body.Email
-   console.log(email)
-   console.log(linhanome)
+  const  linha = req.body.LinhaNome
+  create
+
+
    res.send(linhanome)
 } catch (error) {
   next(error)

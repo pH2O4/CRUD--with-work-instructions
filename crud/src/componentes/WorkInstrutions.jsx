@@ -44,15 +44,21 @@ console.log(response.data)
 <Form>
   <Row>
     <Col xs={20}>
-      <Form.Control onChange={ChangingValue} name="LinhaNome" placeholder="line name" />
-      <div className="ContainerLinhas">
-
-      </div>
+      <Form.Control onChange={ChangingValue} name="LinhaNome" placeholder="First insert Line Name" />
     </Col>
   </Row>
 </Form>
   </div>
-
+      <div className="ContainerLinhas">
+<Lines />
+<Lines />
+<Lines />
+<Lines />
+<Lines />
+<Lines />
+<Lines />
+<Lines />
+      </div>
 </div>
 </div>
   );

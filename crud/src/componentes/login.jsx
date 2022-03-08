@@ -24,15 +24,14 @@ const Login = () =>{
     }
   });
 
-  const ClickButtonS = () =>{
-      
-  Axios.post("http://localhost:8000/api/workinstructions",{
-    Email: values.Email,
-    
-  }).then((response)=> {
-  
-  })
+  const ClickButtonS = () =>{   
 
+    Axios.post("http://localhost:8000/api/workinstructions",{
+      Email: values.Email,
+      Senha: values.Senha,
+    }).then((response)=> {
+    
+    })
   Axios.post("http://localhost:8000/api/login",{
     Email: values.Email,
     Senha: values.Senha,
@@ -45,7 +44,7 @@ const Login = () =>{
   window.alert(`${itens}`);
 }    
 
-  })
+  }) 
 
   }
 return(

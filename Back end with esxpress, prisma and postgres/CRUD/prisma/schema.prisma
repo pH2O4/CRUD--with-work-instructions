@@ -18,7 +18,6 @@ model Usuarios {
 }
 
 model Linhas {
-  id    Int    @default(autoincrement())
   Email String @unique
-  NomeT String
+  NomeL String
 }
