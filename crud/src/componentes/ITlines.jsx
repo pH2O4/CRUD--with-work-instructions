@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Collapse } from "react-bootstrap"
 import {Form, Button} from "react-bootstrap"
 
-const ITlines = () => {
+const ITlines = (props) => {
 
 const [open, setOpen] = useState(false);
   return(
@@ -17,7 +17,7 @@ const [open, setOpen] = useState(false);
         aria-expanded={open}
         id= "tooglebutton"
       >
-        click
+       {props.buttonname}
       </Button>
       <Collapse in={open}>
         <div id="example-collapse-text">
@@ -27,7 +27,7 @@ const [open, setOpen] = useState(false);
     <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={3} />
+    <Form.Control class="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
@@ -35,7 +35,7 @@ const [open, setOpen] = useState(false);
     <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={3} />
+    <Form.Control class="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
@@ -43,7 +43,7 @@ const [open, setOpen] = useState(false);
     <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={3} />
+    <Form.Control class="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
@@ -51,7 +51,7 @@ const [open, setOpen] = useState(false);
     <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={3} />
+    <Form.Control class="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
@@ -59,7 +59,7 @@ const [open, setOpen] = useState(false);
     <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={3} />
+    <Form.Control class="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
@@ -67,7 +67,7 @@ const [open, setOpen] = useState(false);
     <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={3} />
+    <Form.Control class="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 </div>

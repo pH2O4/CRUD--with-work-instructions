@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios"
 import $ from "jquery";
 
-const Login = () =>{
+const Login = (props) =>{
   const [values, setValues] = useState();
   const ChangingValue = (value) => {
     setValues((prevValue) => ({

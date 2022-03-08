@@ -50,14 +50,15 @@ console.log(response.data)
 </Form>
   </div>
       <div className="ContainerLinhas">
-<Lines />
-<Lines />
-<Lines />
-<Lines />
-<Lines />
-<Lines />
-<Lines />
-<Lines />
+ <span className="linhas1"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas2"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas3"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas4"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas5"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas6"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas7"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas8"><Lines buttonname="KSAKSA" /></span>
+ <span className="linhas9"><Lines buttonname="KSAKSA" /></span>
       </div>
 </div>
 </div>

@@ -19,5 +19,14 @@ model Usuarios {
 
 model Linhas {
   Email String @unique
-  NomeL String
+  NomeL1 String
+  NomeL2 String
+  NomeL3 String
+  NomeL4 String
+  NomeL5 String
+  NomeL6 String
+  NomeL7 String
+  NomeL8 String
+  NomeL9 String
+
 }
