@@ -11,14 +11,16 @@ datasource db {
 }
 
 model Usuarios {
-  id    Int    @default(autoincrement())
-  Email String @unique
-  Senha String
-  NomeC String
+  id     Int      @default(autoincrement())
+  Email  String   @unique
+  Senha  String
+  NomeC  String
+  linhas Linhas[]
 }
 
 model Linhas {
-  Email String @unique
+  id     Int    @default(autoincrement())
+  Email  String @unique
   NomeL1 String
   NomeL2 String
   NomeL3 String
@@ -29,4 +31,6 @@ model Linhas {
   NomeL8 String
   NomeL9 String
 
+  Usuarios      Usuarios? @relation(fields: [usuariosEmail], references: [Email])
+  usuariosEmail String?
 }

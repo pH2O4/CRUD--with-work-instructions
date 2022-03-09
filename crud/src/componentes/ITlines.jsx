@@ -24,50 +24,50 @@ const [open, setOpen] = useState(false);
 <div className="coluns">
 <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
+    <Form.Control className="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={9} />
+    <Form.Control className="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
+    <Form.Control className="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={9} />
+    <Form.Control className="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
+    <Form.Control className="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={9} />
+    <Form.Control className="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
+    <Form.Control className="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={9} />
+    <Form.Control className="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
+    <Form.Control className="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={9} />
+    <Form.Control className="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-    <Form.Control class="float-left" type="string" placeholder="Nome da Coluna" />
+    <Form.Control className="float-left" type="string" placeholder="Nome da Coluna" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-    <Form.Control class="float-left"as="textarea" rows={9} />
+    <Form.Control className="float-left"as="textarea" rows={9} />
   </Form.Group>
 </Form>
 </div>

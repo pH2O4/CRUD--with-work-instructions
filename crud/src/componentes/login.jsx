@@ -4,8 +4,13 @@ import {Form, Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios"
 import $ from "jquery";
+import User from "./usuarioname";
 
+   
 const Login = (props) =>{
+  const Rertuninguser = () =>{ 
+   const usuario = <User name={values.email} />
+  }
   const [values, setValues] = useState();
   const ChangingValue = (value) => {
     setValues((prevValue) => ({
@@ -26,12 +31,7 @@ const Login = (props) =>{
 
   const ClickButtonS = () =>{   
 
-    Axios.post("http://localhost:8000/api/workinstructions",{
-      Email: values.Email,
-      Senha: values.Senha,
-    }).then((response)=> {
-    
-    })
+
   Axios.post("http://localhost:8000/api/login",{
     Email: values.Email,
     Senha: values.Senha,
@@ -73,4 +73,4 @@ return(
 
 }
 
-export default Login
+export default Rertuninguser
