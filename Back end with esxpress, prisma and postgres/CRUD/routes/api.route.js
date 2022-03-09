@@ -83,11 +83,10 @@ router.post('/workinstructions', async (req, res, next) =>{
 
 try {
     const  linhanome  = req.body.LinhaNome
-  const  email  = req.body.Email
+
   const  linha = req.body.LinhaNome
-  create
-
-
+  const email = req.body.Email
+  redi
    res.send(linhanome)
 } catch (error) {
   next(error)
