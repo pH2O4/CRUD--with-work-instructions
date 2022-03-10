@@ -7,7 +7,6 @@ import Axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus ,faWrench, faCircleUser} from '@fortawesome/free-solid-svg-icons'
 import Lines from '../componentes/ITlines'
-import UUsuario from './login'
 
 const WorkS = () =>{
 
@@ -36,7 +35,7 @@ console.log(response.data)
 <div className = "Work">
 <div className="header">
 <Button  href="/WorkStation" className="webfunctions">Minhas Instruções de Trabalho</Button>
-<Button className="webfunctions"><UUsuario/><FontAwesomeIcon icon={faCircleUser} /></Button>
+<Button className="webfunctions"><FontAwesomeIcon icon={faCircleUser} /></Button>
 <Button className="webfunctions"><FontAwesomeIcon icon={faWrench} /> </Button>
 </div>
 <div className="Contentx">

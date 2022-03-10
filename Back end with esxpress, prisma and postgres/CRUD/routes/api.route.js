@@ -32,7 +32,7 @@ router.post('/login', async (req, res, next) => {
     }else if(SENHAPRO == 0){
       res.send("senha errada verifique novamente")
     }else{
-      res.send("logando")
+      res.send(email)
     }
    
 

@@ -4,13 +4,10 @@ import {Form, Button} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from "axios"
 import $ from "jquery";
-import User from "./usuarioname";
 
    
 const Login = (props) =>{
-  const Rertuninguser = () =>{ 
-   const usuario = <User name={values.email} />
-  }
+
   const [values, setValues] = useState();
   const ChangingValue = (value) => {
     setValues((prevValue) => ({
@@ -37,7 +34,8 @@ const Login = (props) =>{
     Senha: values.Senha,
   }).then((response)=> {
     const itens = response.data
-   if(response.data === "logando"){
+   if(response.data === values.Email){
+     console.log(response.data)
   window.location.href = 'http://localhost:3000/WorkStation'
 
 }else{
@@ -73,4 +71,4 @@ return(
 
 }
 
-export default Rertuninguser
+export default Login
